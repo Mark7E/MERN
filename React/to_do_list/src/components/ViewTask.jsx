@@ -5,7 +5,7 @@ const ViewTask = (props) => {
     return (
         <div className="checkbox">
             <input type="checkbox" checked={props.toDoList.completed}  onChange={() => props.finishedTask(props.idx)} />
-            <label className="strikethrough">{props.toDoList.task} <button onClick={() => props.finishTask(props.idx) } >Delete</button></label>
+            <label className="strikethrough">{props.toDoList.task} <button onClick={() => props.deleteTask(props.idx) } >Delete</button></label>
         </div>
     )
 }

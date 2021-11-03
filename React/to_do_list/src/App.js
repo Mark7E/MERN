@@ -25,7 +25,7 @@ function App() {
     setToDoList(copyToDo)
   }
 
-  const finishTask = (idToBeDeleted) => {
+  const deleteTask = (idToBeDeleted) => {
     const newFiltered = toDoList.filter((task, i) => idToBeDeleted !== i ? true : false)
     setToDoList(newFiltered);
   }
@@ -40,7 +40,7 @@ function App() {
             toDoList={toDoList}
               idx={i}
               finishedTask ={finishedTask}
-              finishTask={finishTask}
+              deleteTask={deleteTask}
 
             />)
         })
